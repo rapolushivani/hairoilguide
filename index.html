@@ -1,0 +1,1459 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The World's Ultimate Hair Growth Oil</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Cinzel:wght@400;600;700&family=Raleway:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --gold: #C9A84C;
+    --gold-light: #E8C97A;
+    --gold-pale: #F5E8C0;
+    --deep: #1A0F00;
+    --dark: #2C1A06;
+    --mid: #4A2E0A;
+    --amber: #7A4A12;
+    --cream: #FDF6E8;
+    --sage: #5C6B47;
+    --terracotta: #8B4513;
+    --ink: #0F0A00;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    background: var(--deep);
+    color: var(--cream);
+    font-family: 'Raleway', sans-serif;
+    font-weight: 300;
+    overflow-x: hidden;
+  }
+
+  /* ── HERO ── */
+  .hero {
+    min-height: 100vh;
+    background: radial-gradient(ellipse at 30% 20%, #3A1F00 0%, #1A0F00 40%, #0A0600 100%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 60px 24px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='80'%3E%3Ccircle cx='40' cy='40' r='1' fill='%23C9A84C' opacity='0.15'/%3E%3Ccircle cx='10' cy='10' r='0.5' fill='%23C9A84C' opacity='0.1'/%3E%3Ccircle cx='70' cy='65' r='0.8' fill='%23C9A84C' opacity='0.12'/%3E%3C/svg%3E");
+    pointer-events: none;
+  }
+
+  .mandala {
+    width: 280px;
+    height: 280px;
+    margin-bottom: 40px;
+    animation: spin-slow 40s linear infinite;
+    opacity: 0.35;
+  }
+
+  @keyframes spin-slow {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+  }
+
+  .hero-eyebrow {
+    font-family: 'Cinzel', serif;
+    font-size: 11px;
+    letter-spacing: 6px;
+    color: var(--gold);
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    opacity: 0;
+    animation: fadeUp 1s ease 0.3s forwards;
+  }
+
+  .hero-title {
+    font-family: 'Cinzel', serif;
+    font-size: clamp(2.4rem, 6vw, 5rem);
+    font-weight: 700;
+    line-height: 1.1;
+    color: var(--gold-light);
+    text-shadow: 0 0 60px rgba(201,168,76,0.4);
+    margin-bottom: 16px;
+    opacity: 0;
+    animation: fadeUp 1s ease 0.5s forwards;
+  }
+
+  .hero-subtitle {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(1.1rem, 2.5vw, 1.6rem);
+    font-style: italic;
+    color: var(--gold-pale);
+    opacity: 0;
+    animation: fadeUp 1s ease 0.7s forwards;
+    max-width: 600px;
+    line-height: 1.6;
+  }
+
+  .hero-divider {
+    width: 180px;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--gold), transparent);
+    margin: 30px auto;
+    opacity: 0;
+    animation: fadeUp 1s ease 0.9s forwards;
+  }
+
+  .hero-desc {
+    font-size: 0.95rem;
+    color: rgba(253,246,232,0.7);
+    max-width: 560px;
+    line-height: 1.8;
+    letter-spacing: 0.03em;
+    opacity: 0;
+    animation: fadeUp 1s ease 1.1s forwards;
+  }
+
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(24px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  /* ── NAV TABS ── */
+  .tab-nav {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 4px;
+    padding: 32px 24px 0;
+    background: var(--dark);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    border-bottom: 1px solid rgba(201,168,76,0.2);
+  }
+
+  .tab-btn {
+    background: none;
+    border: 1px solid transparent;
+    color: rgba(253,246,232,0.5);
+    font-family: 'Cinzel', serif;
+    font-size: 0.65rem;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    padding: 10px 18px;
+    cursor: pointer;
+    transition: all 0.3s;
+    border-radius: 2px;
+  }
+
+  .tab-btn:hover, .tab-btn.active {
+    color: var(--gold);
+    border-color: rgba(201,168,76,0.4);
+    background: rgba(201,168,76,0.06);
+  }
+
+  /* ── SECTIONS ── */
+  .section {
+    display: none;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 60px 24px 100px;
+    animation: fadeIn 0.5s ease;
+  }
+
+  .section.active { display: block; }
+
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(16px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  .section-label {
+    font-family: 'Cinzel', serif;
+    font-size: 0.65rem;
+    letter-spacing: 5px;
+    color: var(--gold);
+    text-transform: uppercase;
+    margin-bottom: 12px;
+    display: block;
+  }
+
+  .section-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(2rem, 4vw, 3rem);
+    font-weight: 300;
+    line-height: 1.2;
+    color: var(--gold-light);
+    margin-bottom: 32px;
+  }
+
+  .gold-rule {
+    width: 80px;
+    height: 1px;
+    background: var(--gold);
+    margin-bottom: 40px;
+    opacity: 0.6;
+  }
+
+  /* ── INGREDIENT CARDS ── */
+  .ingredient-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+    margin-bottom: 48px;
+  }
+
+  .ingredient-card {
+    background: linear-gradient(135deg, rgba(74,46,10,0.4), rgba(26,15,0,0.6));
+    border: 1px solid rgba(201,168,76,0.2);
+    border-radius: 8px;
+    padding: 28px;
+    transition: all 0.3s;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .ingredient-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, var(--gold), transparent);
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+
+  .ingredient-card:hover {
+    border-color: rgba(201,168,76,0.5);
+    transform: translateY(-4px);
+    box-shadow: 0 16px 40px rgba(0,0,0,0.4);
+  }
+
+  .ingredient-card:hover::before { opacity: 1; }
+
+  .card-origin {
+    font-family: 'Cinzel', serif;
+    font-size: 0.6rem;
+    letter-spacing: 3px;
+    color: var(--gold);
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .card-origin::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: rgba(201,168,76,0.3);
+  }
+
+  .card-name {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.4rem;
+    color: var(--gold-light);
+    margin-bottom: 4px;
+  }
+
+  .card-latin {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 0.85rem;
+    color: rgba(253,246,232,0.45);
+    margin-bottom: 14px;
+  }
+
+  .card-desc {
+    font-size: 0.88rem;
+    line-height: 1.75;
+    color: rgba(253,246,232,0.75);
+    margin-bottom: 16px;
+  }
+
+  .badge-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+  }
+
+  .badge {
+    font-size: 0.65rem;
+    letter-spacing: 1px;
+    padding: 3px 10px;
+    border-radius: 20px;
+    font-weight: 500;
+  }
+
+  .badge-science { background: rgba(92,107,71,0.35); color: #A8C47A; border: 1px solid rgba(168,196,122,0.3); }
+  .badge-tradition { background: rgba(139,69,19,0.35); color: #E8A87C; border: 1px solid rgba(232,168,124,0.3); }
+  .badge-dht { background: rgba(120,50,160,0.3); color: #D4A8F0; border: 1px solid rgba(212,168,240,0.3); }
+  .badge-circulation { background: rgba(180,80,40,0.3); color: #F0A878; border: 1px solid rgba(240,168,120,0.3); }
+
+  .evidence-bar {
+    margin-top: 16px;
+  }
+
+  .evidence-label {
+    font-size: 0.65rem;
+    letter-spacing: 2px;
+    color: rgba(253,246,232,0.4);
+    text-transform: uppercase;
+    margin-bottom: 6px;
+  }
+
+  .bar-track {
+    height: 4px;
+    background: rgba(201,168,76,0.15);
+    border-radius: 2px;
+    overflow: hidden;
+  }
+
+  .bar-fill {
+    height: 100%;
+    border-radius: 2px;
+    background: linear-gradient(90deg, var(--gold), var(--gold-light));
+    transition: width 1s ease;
+  }
+
+  /* ── FORMULA SECTION ── */
+  .formula-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 32px;
+    margin-bottom: 48px;
+  }
+
+  @media (max-width: 700px) {
+    .formula-container { grid-template-columns: 1fr; }
+  }
+
+  .formula-block {
+    background: linear-gradient(135deg, rgba(74,46,10,0.3), rgba(26,15,0,0.5));
+    border: 1px solid rgba(201,168,76,0.2);
+    border-radius: 8px;
+    padding: 32px;
+  }
+
+  .formula-block h3 {
+    font-family: 'Cinzel', serif;
+    font-size: 0.7rem;
+    letter-spacing: 4px;
+    color: var(--gold);
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid rgba(201,168,76,0.2);
+  }
+
+  .formula-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 10px 0;
+    border-bottom: 1px solid rgba(201,168,76,0.08);
+    gap: 12px;
+  }
+
+  .formula-row:last-child { border-bottom: none; }
+
+  .formula-name {
+    font-size: 0.9rem;
+    color: var(--cream);
+    line-height: 1.4;
+    flex: 1;
+  }
+
+  .formula-name small {
+    display: block;
+    font-size: 0.72rem;
+    color: rgba(253,246,232,0.45);
+    font-style: italic;
+    margin-top: 2px;
+  }
+
+  .formula-amount {
+    font-family: 'Cinzel', serif;
+    font-size: 0.8rem;
+    color: var(--gold);
+    white-space: nowrap;
+  }
+
+  /* ── PROCESS STEPS ── */
+  .process-timeline {
+    position: relative;
+    padding-left: 40px;
+  }
+
+  .process-timeline::before {
+    content: '';
+    position: absolute;
+    left: 10px;
+    top: 8px;
+    bottom: 8px;
+    width: 1px;
+    background: linear-gradient(180deg, var(--gold), transparent);
+  }
+
+  .process-step {
+    position: relative;
+    margin-bottom: 36px;
+  }
+
+  .step-dot {
+    position: absolute;
+    left: -34px;
+    top: 4px;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: var(--gold);
+    box-shadow: 0 0 12px rgba(201,168,76,0.5);
+  }
+
+  .step-number {
+    font-family: 'Cinzel', serif;
+    font-size: 0.6rem;
+    letter-spacing: 3px;
+    color: var(--gold);
+    text-transform: uppercase;
+    margin-bottom: 6px;
+  }
+
+  .step-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.25rem;
+    color: var(--gold-light);
+    margin-bottom: 8px;
+  }
+
+  .step-body {
+    font-size: 0.9rem;
+    line-height: 1.8;
+    color: rgba(253,246,232,0.7);
+  }
+
+  .step-tip {
+    margin-top: 10px;
+    padding: 12px 16px;
+    background: rgba(201,168,76,0.08);
+    border-left: 2px solid var(--gold);
+    font-size: 0.84rem;
+    color: rgba(253,246,232,0.65);
+    font-style: italic;
+    border-radius: 0 4px 4px 0;
+  }
+
+  /* ── RITUAL ── */
+  .ritual-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 20px;
+    margin-top: 16px;
+  }
+
+  .ritual-card {
+    background: rgba(74,46,10,0.25);
+    border: 1px solid rgba(201,168,76,0.15);
+    border-radius: 8px;
+    padding: 24px;
+  }
+
+  .ritual-icon {
+    font-size: 2rem;
+    margin-bottom: 12px;
+  }
+
+  .ritual-title {
+    font-family: 'Cinzel', serif;
+    font-size: 0.7rem;
+    letter-spacing: 3px;
+    color: var(--gold);
+    text-transform: uppercase;
+    margin-bottom: 10px;
+  }
+
+  .ritual-body {
+    font-size: 0.88rem;
+    line-height: 1.75;
+    color: rgba(253,246,232,0.68);
+  }
+
+  /* ── SCIENCE PANEL ── */
+  .science-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.87rem;
+    margin-bottom: 40px;
+  }
+
+  .science-table th {
+    font-family: 'Cinzel', serif;
+    font-size: 0.62rem;
+    letter-spacing: 3px;
+    color: var(--gold);
+    text-transform: uppercase;
+    padding: 12px 16px;
+    text-align: left;
+    border-bottom: 1px solid rgba(201,168,76,0.3);
+  }
+
+  .science-table td {
+    padding: 12px 16px;
+    border-bottom: 1px solid rgba(201,168,76,0.08);
+    color: rgba(253,246,232,0.75);
+    vertical-align: top;
+    line-height: 1.6;
+  }
+
+  .science-table tr:hover td {
+    background: rgba(201,168,76,0.05);
+  }
+
+  .science-score {
+    display: flex;
+    gap: 3px;
+  }
+
+  .dot-filled { color: var(--gold); }
+  .dot-empty { color: rgba(201,168,76,0.2); }
+
+  /* ── TIPS ── */
+  .tips-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 20px;
+  }
+
+  .tip-card {
+    padding: 24px;
+    background: rgba(74,46,10,0.2);
+    border: 1px solid rgba(201,168,76,0.15);
+    border-radius: 8px;
+  }
+
+  .tip-num {
+    font-family: 'Cinzel', serif;
+    font-size: 2rem;
+    color: rgba(201,168,76,0.25);
+    font-weight: 700;
+    margin-bottom: 8px;
+  }
+
+  .tip-title {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--gold-light);
+    margin-bottom: 8px;
+    letter-spacing: 0.03em;
+  }
+
+  .tip-body {
+    font-size: 0.84rem;
+    line-height: 1.75;
+    color: rgba(253,246,232,0.65);
+  }
+
+  /* ── FOOTER ── */
+  footer {
+    text-align: center;
+    padding: 48px 24px;
+    border-top: 1px solid rgba(201,168,76,0.15);
+    font-size: 0.78rem;
+    color: rgba(253,246,232,0.35);
+    letter-spacing: 0.05em;
+    line-height: 1.8;
+  }
+
+  .gold-line {
+    width: 60px;
+    height: 1px;
+    background: var(--gold);
+    margin: 0 auto 20px;
+    opacity: 0.4;
+  }
+
+  /* ── PROSE ── */
+  .prose {
+    font-size: 0.95rem;
+    line-height: 1.9;
+    color: rgba(253,246,232,0.72);
+    max-width: 760px;
+    margin-bottom: 40px;
+  }
+
+  .prose strong {
+    color: var(--gold-light);
+    font-weight: 500;
+  }
+
+  .highlight-box {
+    background: linear-gradient(135deg, rgba(201,168,76,0.1), rgba(201,168,76,0.04));
+    border: 1px solid rgba(201,168,76,0.3);
+    border-radius: 8px;
+    padding: 28px 32px;
+    margin: 32px 0;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.15rem;
+    font-style: italic;
+    color: var(--gold-light);
+    line-height: 1.7;
+  }
+
+  @media (max-width: 600px) {
+    .ingredient-grid { grid-template-columns: 1fr; }
+    .formula-container { grid-template-columns: 1fr; }
+    .tab-btn { font-size: 0.58rem; padding: 8px 12px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- HERO -->
+<section class="hero">
+  <svg class="mandala" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <circle cx="100" cy="100" r="90" stroke="#C9A84C" stroke-width="0.5"/>
+    <circle cx="100" cy="100" r="70" stroke="#C9A84C" stroke-width="0.5"/>
+    <circle cx="100" cy="100" r="50" stroke="#C9A84C" stroke-width="0.5"/>
+    <circle cx="100" cy="100" r="30" stroke="#C9A84C" stroke-width="0.5"/>
+    <circle cx="100" cy="100" r="8" fill="#C9A84C" opacity="0.6"/>
+    <g stroke="#C9A84C" stroke-width="0.5" opacity="0.7">
+      <line x1="100" y1="10" x2="100" y2="190"/>
+      <line x1="10" y1="100" x2="190" y2="100"/>
+      <line x1="29" y1="29" x2="171" y2="171"/>
+      <line x1="171" y1="29" x2="29" y2="171"/>
+      <line x1="14" y1="62" x2="186" y2="138"/>
+      <line x1="14" y1="138" x2="186" y2="62"/>
+      <line x1="62" y1="14" x2="138" y2="186"/>
+      <line x1="138" y1="14" x2="62" y2="186"/>
+    </g>
+    <g fill="#C9A84C" opacity="0.5">
+      <circle cx="100" cy="10" r="3"/>
+      <circle cx="100" cy="190" r="3"/>
+      <circle cx="10" cy="100" r="3"/>
+      <circle cx="190" cy="100" r="3"/>
+      <circle cx="29" cy="29" r="2.5"/>
+      <circle cx="171" cy="29" r="2.5"/>
+      <circle cx="29" cy="171" r="2.5"/>
+      <circle cx="171" cy="171" r="2.5"/>
+    </g>
+    <g stroke="#C9A84C" stroke-width="0.3" opacity="0.4">
+      <ellipse cx="100" cy="100" rx="90" ry="30"/>
+      <ellipse cx="100" cy="100" rx="30" ry="90"/>
+      <ellipse cx="100" cy="100" rx="70" ry="20"/>
+      <ellipse cx="100" cy="100" rx="20" ry="70"/>
+    </g>
+  </svg>
+  <p class="hero-eyebrow">Ancient Wisdom · Modern Science</p>
+  <h1 class="hero-title">The Ultimate<br>Hair Growth Oil</h1>
+  <div class="hero-divider"></div>
+  <p class="hero-subtitle">A synthesis of 5,000 years of wisdom — Ayurvedic, Middle Eastern, African, and East Asian traditions — cross-validated by modern trichology</p>
+  <p class="hero-desc" style="margin-top: 20px;">Every ingredient chosen for a purpose. Every step of the process deliberate. This is not a product — it is a living ritual passed down through generations, now made whole.</p>
+</section>
+
+<!-- NAVIGATION -->
+<nav class="tab-nav">
+  <button class="tab-btn active" onclick="showTab('ingredients')">Ingredients</button>
+  <button class="tab-btn" onclick="showTab('formula')">Formula</button>
+  <button class="tab-btn" onclick="showTab('process')">How to Make</button>
+  <button class="tab-btn" onclick="showTab('ritual')">Ritual & Application</button>
+  <button class="tab-btn" onclick="showTab('science')">Science</button>
+  <button class="tab-btn" onclick="showTab('tips')">Tips & FAQs</button>
+</nav>
+
+<!-- ═══════════════════ INGREDIENTS ═══════════════════ -->
+<section id="ingredients" class="section active">
+  <span class="section-label">The Foundation</span>
+  <h2 class="section-title">The World's Finest<br>Hair Growth Ingredients</h2>
+  <div class="gold-rule"></div>
+
+  <p class="prose">These ingredients span every great hair tradition on earth — selected because each brings a distinct, scientifically-understood or historically-validated mechanism for hair growth, follicle health, scalp circulation, or DHT inhibition. Together, they form a symphony.</p>
+
+  <h3 style="font-family:'Cinzel',serif;font-size:0.7rem;letter-spacing:4px;color:var(--gold);text-transform:uppercase;margin-bottom:24px;">BASE OILS (Carriers)</h3>
+  <div class="ingredient-grid">
+
+    <div class="ingredient-card">
+      <div class="card-origin">🇮🇳 India / Global</div>
+      <div class="card-name">Coconut Oil</div>
+      <div class="card-latin">Cocos nucifera</div>
+      <div class="card-desc">The only oil proven to penetrate the hair shaft — not just coat it. Reduces protein loss in healthy and damaged hair. Rich in lauric acid with high affinity to hair proteins. Used for over 3,000 years in South Asian hair rituals as the sacred base of all Ayurvedic taila (oils).</div>
+      <div class="badge-row">
+        <span class="badge badge-science">Shaft Penetration</span>
+        <span class="badge badge-tradition">Ayurvedic Base</span>
+        <span class="badge badge-tradition">Protein Protection</span>
+      </div>
+      <div class="evidence-bar">
+        <div class="evidence-label">Evidence Strength</div>
+        <div class="bar-track"><div class="bar-fill" style="width:88%"></div></div>
+      </div>
+    </div>
+
+    <div class="ingredient-card">
+      <div class="card-origin">🇮🇳 India / Asia</div>
+      <div class="card-name">Sesame Oil</div>
+      <div class="card-latin">Sesamum indicum</div>
+      <div class="card-desc">The sacred oil of Ayurveda — the foundational base for most classical taila preparations. Rich in sesamol, sesamin, and lignans with powerful antioxidant and anti-inflammatory action. Penetrates deeply, nourishes follicles, and has natural UV-protective properties. Warming and deeply conditioning.</div>
+      <div class="badge-row">
+        <span class="badge badge-science">Anti-Inflammatory</span>
+        <span class="badge badge-tradition">Classical Ayurveda</span>
+        <span class="badge badge-science">UV Protection</span>
+      </div>
+      <div class="evidence-bar">
+        <div class="evidence-label">Evidence Strength</div>
+        <div class="bar-track"><div class="bar-fill" style="width:78%"></div></div>
+      </div>
+    </div>
+
+    <div class="ingredient-card">
+      <div class="card-origin">🇲🇦 Morocco / Berber</div>
+      <div class="card-name">Argan Oil</div>
+      <div class="card-latin">Argania spinosa</div>
+      <div class="card-desc">"Liquid gold" — used by Berber women for centuries. Rich in tocopherols, squalene, phenolic compounds, and oleic acid. Deeply conditions, strengthens follicles, and protects against oxidative stress. Absorbs quickly without greasiness. One of the most nutrient-dense plant oils in existence.</div>
+      <div class="badge-row">
+        <span class="badge badge-science">Oxidative Protection</span>
+        <span class="badge badge-tradition">Moroccan Berber</span>
+        <span class="badge badge-science">Follicle Strength</span>
+      </div>
+      <div class="evidence-bar">
+        <div class="evidence-label">Evidence Strength</div>
+        <div class="bar-track"><div class="bar-fill" style="width:75%"></div></div>
+      </div>
+    </div>
+
+    <div class="ingredient-card">
+      <div class="card-origin">🌍 Global / Sonoran Desert</div>
+      <div class="card-name">Jojoba Oil</div>
+      <div class="card-latin">Simmondsia chinensis</div>
+      <div class="card-desc">Technically a liquid wax, not an oil — structurally identical to the scalp's own sebum. Balances oil production, deeply moisturises without clogging follicles, and acts as a perfect delivery vehicle for essential oils. Antimicrobial. Virtually non-comedogenic. The modern world's perfect base additive.</div>
+      <div class="badge-row">
+        <span class="badge badge-science">Sebum Mimic</span>
+        <span class="badge badge-science">Follicle-Safe</span>
+        <span class="badge badge-tradition">Desert Peoples</span>
+      </div>
+      <div class="evidence-bar">
+        <div class="evidence-label">Evidence Strength</div>
+        <div class="bar-track"><div class="bar-fill" style="width:80%"></div></div>
+      </div>
+    </div>
+
+    <div class="ingredient-card">
+      <div class="card-origin">🌍 Caribbean / West Africa</div>
+      <div class="card-name">Black Castor Oil</div>
+      <div class="card-latin">Ricinus communis</div>
+      <div class="card-desc">Jamaican Black Castor Oil — roasted seeds give it a higher ash content and deeper penetration. Ricinoleic acid (90%) inhibits prostaglandin D2 synthase, linked to hair loss. Legendary in Afro-Caribbean and West African traditions for restoring edges and stimulating thick growth. Thickest, most nourishing of all carrier oils.</div>
+      <div class="badge-row">
+        <span class="badge badge-dht">PGD2 Inhibitor</span>
+        <span class="badge badge-circulation">Scalp Circulation</span>
+        <span class="badge badge-tradition">Caribbean / African</span>
+      </div>
+      <div class="evidence-bar">
+        <div class="evidence-label">Evidence Strength</div>
+        <div class="bar-track"><div class="bar-fill" style="width:65%"></div></div>
+      </div>
+    </div>
+
+    <div class="ingredient-card">
+      <div class="card-origin">🌿 Global</div>
+      <div class="card-name">Pumpkin Seed Oil</div>
+      <div class="card-latin">Cucurbita pepo</div>
+      <div class="card-desc">Clinical human trials show a 40% increase in hair count after 24 weeks. Its phytosterols — especially beta-sitosterol — act as natural 5-alpha reductase inhibitors, targeting the same enzyme as finasteride. Rich in zinc, which is essential for hair follicle cycling. One of the most evidence-backed natural DHT blockers.</div>
+      <div class="badge-row">
+        <span class="badge badge-dht">5-α Reductase Inhibitor</span>
+        <span class="badge badge-science">Human Trial Proven</span>
+        <span class="badge badge-science">+40% Hair Count</span>
+      </div>
+      <div class="evidence-bar">
+        <div class="evidence-label">Evidence Strength</div>
+        <div class="bar-track"><div class="bar-fill" style="width:85%"></div></div>
+      </div>
+    </div>
+
+  </div>
+
+  <h3 style="font-family:'Cinzel',serif;font-size:0.7rem;letter-spacing:4px;color:var(--gold);text-transform:uppercase;margin-bottom:24px;margin-top:48px;">HERBAL INFUSIONS (The Soul of the Oil)</h3>
+  <div class="ingredient-grid">
+
+    <div class="ingredient-card">
+      <div class="card-origin">🇮🇳 India — Ayurveda's #1 Hair Herb</div>
+      <div class="card-name">Bhringraj</div>
+      <div class="card-latin">Eclipta alba / prostrata</div>
+      <div class="card-desc">The "King of Hair" in Ayurveda. Used for millennia to prevent hair fall, stimulate new growth, and darken greying hair. Modern research confirms it stimulates hair follicle proliferation and extends the anagen (growth) phase. Contains ecliptine, wedelolactone, and other bioactive phytochemicals. The single most important Ayurvedic herb for hair.</div>
+      <div class="badge-row">
+        <span class="badge badge-science">Anagen Extension</span>
+        <span class="badge badge-tradition">Ayurvedic Sacred</span>
+        <span class="badge badge-science">Follicle Proliferation</span>
+      </div>
+      <div class="evidence-bar">
+        <div class="evidence-label">Evidence Strength</div>
+        <div class="bar-track"><div class="bar-fill" style="width:82%"></div></div>
+      </div>
+    </div>
+
+    <div class="ingredient-card">
+      <div class="card-origin">🇮🇳 India — "The Indian Gooseberry"</div>
+      <div class="card-name">Amla</div>
+      <div class="card-latin">Phyllanthus emblica</div>
+      <div class="card-desc">One of the highest natural sources of Vitamin C on earth — 20x more than oranges. Packed with polyphenols, tannins, and amino acids. Strengthens follicles, prevents premature graying, reduces scalp inflammation, and naturally inhibits 5-alpha reductase (DHT). Anti-oxidant potency is unmatched in the plant kingdom.</div>
+      <div class="badge-row">
+        <span class="badge badge-dht">DHT Inhibitor</span>
+        <span class="badge badge-science">Highest Vit-C</span>
+        <span class="badge badge-tradition">Ayurvedic Rasayana</span>
+      </div>
+      <div class="evidence-bar">
+        <div class="evidence-label">Evidence Strength</div>
+        <div class="bar-track"><div class="bar-fill" style="width:79%"></div></div>
+      </div>
+    </div>
+
+    <div class="ingredient-card">
+      <div class="card-origin">🌿 India / Sri Lanka / Africa</div>
+      <div class="card-name">Brahmi / Gotu Kola</div>
+      <div class="card-latin">Centella asiatica</div>
+      <div class="card-desc">Revered in both Ayurveda and traditional African medicine. Asiaticoside in Centella stimulates collagen synthesis and improves microcirculation in the scalp. Strengthens the connective tissue around hair follicles. Reduces cortisol-linked hair fall. Also deeply calming — stress is one of the biggest drivers of hair loss.</div>
+      <div class="badge-row">
+        <span class="badge badge-science">Collagen Synthesis</span>
+        <span class="badge badge-circulation">Microcirculation</span>
+        <span class="badge badge-tradition">Vedic Herb</span>
+      </div>
+      <div class="evidence-bar">
+        <div class="evidence-label">Evidence Strength</div>
+        <div class="bar-track"><div class="bar-fill" style="width:74%"></div></div>
+      </div>
+    </div>
+
+    <div class="ingredient-card">
+      <div class="card-origin">🌸 India / Egypt / Worldwide</div>
+      <div class="card-name">Hibiscus</div>
+      <div class="card-latin">Hibiscus rosa-sinensis</div>
+      <div class="card-desc">Used in Indian, Egyptian, and Caribbean hair traditions for centuries. Rich in amino acids (especially hydroxyproline — a precursor to hair protein), alpha-hydroxy acids, and flavonoids. Stimulates dormant follicles, conditions the scalp, and leaves hair with remarkable softness and lustre. A prized addition to any hair oil.</div>
+      <div class="badge-row">
+        <span class="badge badge-science">Amino Acids</span>
+        <span class="badge badge-tradition">Pan-Cultural</span>
+        <span class="badge badge-science">Follicle Stimulation</span>
+      </div>
+      <div class="evidence-bar">
+        <div class="evidence-label">Evidence Strength</div>
+        <div class="bar-track"><div class="bar-fill" style="width:70%"></div></div>
+      </div>
+    </div>
+
+    <div class="ingredient-card">
+      <div class="card-origin">🌿 India / Mediterranean / Global</div>
+      <div class="card-name">Fenugreek</div>
+      <div class="card-latin">Trigonella foenum-graecum</div>
+      <div class="card-desc">Seeds are loaded with lecithin (natural emollient), diosgenin (natural DHT-blocker), nicotinic acid, and proteins that directly nourish follicles. Used in Indian, North African, and Middle Eastern traditions for thick, shiny hair. Also has antifungal properties that combat dandruff — a silent enemy of hair growth.</div>
+      <div class="badge-row">
+        <span class="badge badge-dht">Diosgenin / DHT</span>
+        <span class="badge badge-tradition">Indian & ME</span>
+        <span class="badge badge-science">Follicle Nutrition</span>
+      </div>
+      <div class="evidence-bar">
+        <div class="evidence-label">Evidence Strength</div>
+        <div class="bar-track"><div class="bar-fill" style="width:72%"></div></div>
+      </div>
+    </div>
+
+    <div class="ingredient-card">
+      <div class="card-origin">🌿 India / Asia</div>
+      <div class="card-name">Neem</div>
+      <div class="card-latin">Azadirachta indica</div>
+      <div class="card-desc">The "village pharmacy" of India. Azadirachtin and nimbin provide powerful antifungal and antibacterial action on the scalp. Eliminates dandruff, seborrheic dermatitis, and scalp infections that impede hair growth. Unblocks follicles, cleanses scalp pores, and creates a healthy growth environment. Essential in any complete formula.</div>
+      <div class="badge-row">
+        <span class="badge badge-science">Antifungal</span>
+        <span class="badge badge-science">Scalp Detox</span>
+        <span class="badge badge-tradition">Indian Tradition</span>
+      </div>
+      <div class="evidence-bar">
+        <div class="evidence-label">Evidence Strength</div>
+        <div class="bar-track"><div class="bar-fill" style="width:76%"></div></div>
+      </div>
+    </div>
+
+  </div>
+
+  <h3 style="font-family:'Cinzel',serif;font-size:0.7rem;letter-spacing:4px;color:var(--gold);text-transform:uppercase;margin-bottom:24px;margin-top:48px;">ESSENTIAL OILS (The Activators)</h3>
+  <div class="ingredient-grid">
+
+    <div class="ingredient-card">
+      <div class="card-origin">🌿 Mediterranean / Europe</div>
+      <div class="card-name">Rosemary Oil</div>
+      <div class="card-latin">Rosmarinus officinalis</div>
+      <div class="card-desc">The star of modern trichology research. 12-methoxycarnosic acid blocks testosterone → DHT conversion with 82–94% efficiency. A landmark 2015 clinical trial showed rosemary oil matched 2% minoxidil for hair regrowth after 6 months — with significantly less scalp irritation. Anti-inflammatory, antifungal, antioxidant. Use at 2–3% dilution.</div>
+      <div class="badge-row">
+        <span class="badge badge-dht">DHT Blocker (82-94%)</span>
+        <span class="badge badge-science">= Minoxidil Study</span>
+        <span class="badge badge-circulation">Circulation</span>
+      </div>
+      <div class="evidence-bar">
+        <div class="evidence-label">Evidence Strength</div>
+        <div class="bar-track"><div class="bar-fill" style="width:95%"></div></div>
+      </div>
+    </div>
+
+    <div class="ingredient-card">
+      <div class="card-origin">🌿 Global</div>
+      <div class="card-name">Peppermint Oil</div>
+      <div class="card-latin">Mentha × piperita</div>
+      <div class="card-desc">Menthol triggers vasodilation, significantly increasing blood flow to the scalp and waking dormant follicles. In animal studies, peppermint oil outperformed 3% minoxidil (92% vs 55% regrowth at 4 weeks). While human studies are limited, the vasodilation mechanism is physiologically sound and well-established. Use at 1–2% dilution.</div>
+      <div class="badge-row">
+        <span class="badge badge-circulation">Vasodilation</span>
+        <span class="badge badge-science">Animal: > Minoxidil</span>
+        <span class="badge badge-science">Follicle Wake-up</span>
+      </div>
+      <div class="evidence-bar">
+        <div class="evidence-label">Evidence Strength</div>
+        <div class="bar-track"><div class="bar-fill" style="width:72%"></div></div>
+      </div>
+    </div>
+
+    <div class="ingredient-card">
+      <div class="card-origin">🌍 Middle East / North Africa</div>
+      <div class="card-name">Black Seed Oil</div>
+      <div class="card-latin">Nigella sativa</div>
+      <div class="card-desc">The "Blessed Oil" — referenced in ancient Islamic medicine as a cure for everything except death. Thymoquinone (TQ) is the key compound: a powerful anti-inflammatory, antihistamine, and antioxidant. A 2017 study showed 76% reduction in hair fall. Clinically tested in telogen effluvium with significant improvement. A bridge between tradition and science.</div>
+      <div class="badge-row">
+        <span class="badge badge-science">76% Hair Fall Reduction</span>
+        <span class="badge badge-tradition">Islamic Medicine</span>
+        <span class="badge badge-science">Thymoquinone</span>
+      </div>
+      <div class="evidence-bar">
+        <div class="evidence-label">Evidence Strength</div>
+        <div class="bar-track"><div class="bar-fill" style="width:80%"></div></div>
+      </div>
+    </div>
+
+    <div class="ingredient-card">
+      <div class="card-origin">🌿 Lavender Fields / Europe</div>
+      <div class="card-name">Lavender Oil</div>
+      <div class="card-latin">Lavandula angustifolia</div>
+      <div class="card-desc">A surprising powerhouse. Studies in mice show 90–95% regrowth and well-documented anti-inflammatory effects. Part of the famous alopecia areata aromatherapy blend (with rosemary, thyme, cedarwood) that appeared in British dermatology guidelines. Deeply calming — cortisol reduction directly supports hair growth. Use at 1–1.5% dilution.</div>
+      <div class="badge-row">
+        <span class="badge badge-science">90-95% Regrowth (animal)</span>
+        <span class="badge badge-science">Dermatology Guidelines</span>
+        <span class="badge badge-circulation">Cortisol Reduction</span>
+      </div>
+      <div class="evidence-bar">
+        <div class="evidence-label">Evidence Strength</div>
+        <div class="bar-track"><div class="bar-fill" style="width:75%"></div></div>
+      </div>
+    </div>
+
+    <div class="ingredient-card">
+      <div class="card-origin">🌲 Atlas Mountains / Himalayas</div>
+      <div class="card-name">Cedarwood Oil</div>
+      <div class="card-latin">Cedrus atlantica</div>
+      <div class="card-desc">Part of the landmark alopecia areata clinical study alongside rosemary, thyme, and lavender. 44% of patients showed significant improvement vs 15% with neutral oil. Balances sebum production, antifungal, and stimulates dermal papilla cells which are directly responsible for hair follicle growth signals. Use at 1–1.5% dilution.</div>
+      <div class="badge-row">
+        <span class="badge badge-science">44% Alopecia Improvement</span>
+        <span class="badge badge-science">Dermal Papilla</span>
+        <span class="badge badge-tradition">Ancient Tradition</span>
+      </div>
+      <div class="evidence-bar">
+        <div class="evidence-label">Evidence Strength</div>
+        <div class="bar-track"><div class="bar-fill" style="width:73%"></div></div>
+      </div>
+    </div>
+
+    <div class="ingredient-card">
+      <div class="card-origin">🌿 East Africa / India</div>
+      <div class="card-name">Thyme Oil</div>
+      <div class="card-latin">Thymus vulgaris</div>
+      <div class="card-desc">The fourth member of the historic alopecia areata blend. Rich in thymol and carvacrol — potent antimicrobials that keep the scalp's microbiome healthy and follicles unblocked. Stimulates circulation and has been used in Mediterranean and Middle Eastern folk medicine for hair loss for centuries. Use at 0.5–1% dilution (potent).</div>
+      <div class="badge-row">
+        <span class="badge badge-science">Alopecia Trial</span>
+        <span class="badge badge-tradition">Mediterranean Folk</span>
+        <span class="badge badge-science">Scalp Microbiome</span>
+      </div>
+      <div class="evidence-bar">
+        <div class="evidence-label">Evidence Strength</div>
+        <div class="bar-track"><div class="bar-fill" style="width:70%"></div></div>
+      </div>
+    </div>
+
+  </div>
+
+  <h3 style="font-family:'Cinzel',serif;font-size:0.7rem;letter-spacing:4px;color:var(--gold);text-transform:uppercase;margin-bottom:24px;margin-top:48px;">ENHANCERS & BOOSTERS</h3>
+  <div class="ingredient-grid">
+
+    <div class="ingredient-card">
+      <div class="card-origin">🌿 Sub-Saharan Africa (Chad/Sahel)</div>
+      <div class="card-name">Chebe Powder</div>
+      <div class="card-latin">Croton zambesicus / Cherry Kola</div>
+      <div class="card-desc">The secret of the Bassari women of Chad who grow waist-length hair. A blend of cherry kola nuts, cloves, lavender croton, resin tree sap, and African stone. Creates a protective film around each hair strand that seals in moisture, prevents breakage, and dramatically increases length retention. A ritual, not just an ingredient.</div>
+      <div class="badge-row">
+        <span class="badge badge-tradition">Chadian Bassari Women</span>
+        <span class="badge badge-science">Length Retention</span>
+        <span class="badge badge-tradition">African Tradition</span>
+      </div>
+      <div class="evidence-bar">
+        <div class="evidence-label">Evidence Strength</div>
+        <div class="bar-track"><div class="bar-fill" style="width:55%"></div></div>
+      </div>
+    </div>
+
+    <div class="ingredient-card">
+      <div class="card-origin">🌿 Global — "The Miracle Tree"</div>
+      <div class="card-name">Moringa Oil</div>
+      <div class="card-latin">Moringa oleifera</div>
+      <div class="card-desc">Used across Africa and South Asia. Contains all essential amino acids (rare in plants), exceptionally stable oleic acid (72%), zeatin (a plant hormone that directly activates cell division), Vitamins A, B, C, and E. Nourishes hair follicles at a cellular level. Exceptionally light and rapidly absorbed. Hydrates the scalp without residue.</div>
+      <div class="badge-row">
+        <span class="badge badge-science">Complete Amino Acids</span>
+        <span class="badge badge-tradition">Africa / South Asia</span>
+        <span class="badge badge-science">Zeatin Growth Factor</span>
+      </div>
+      <div class="evidence-bar">
+        <div class="evidence-label">Evidence Strength</div>
+        <div class="bar-track"><div class="bar-fill" style="width:65%"></div></div>
+      </div>
+    </div>
+
+    <div class="ingredient-card">
+      <div class="card-origin">🌿 Global</div>
+      <div class="card-name">Vitamin E (Tocopherol)</div>
+      <div class="card-latin">Alpha-tocopherol</div>
+      <div class="card-desc">A clinical study found a 34.5% increase in hair number after 8 months of supplementation. Powerful antioxidant that neutralises the free radicals responsible for oxidative stress on the scalp — a primary cause of hair follicle miniaturisation. Also acts as a natural preservative, extending the oil's shelf life significantly.</div>
+      <div class="badge-row">
+        <span class="badge badge-science">+34.5% Hair Count</span>
+        <span class="badge badge-science">Oxidative Protection</span>
+        <span class="badge badge-science">Natural Preservative</span>
+      </div>
+      <div class="evidence-bar">
+        <div class="evidence-label">Evidence Strength</div>
+        <div class="bar-track"><div class="bar-fill" style="width:82%"></div></div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ═══════════════════ FORMULA ═══════════════════ -->
+<section id="formula" class="section">
+  <span class="section-label">The Recipe</span>
+  <h2 class="section-title">The Master Formula</h2>
+  <div class="gold-rule"></div>
+
+  <div class="highlight-box">
+    "This formula begins with the Ayurvedic principle that the oil itself is a vehicle — a carrier of consciousness. Every ingredient speaks to the follicle in a different language. Together, they create a conversation the scalp has been waiting for."
+  </div>
+
+  <div class="formula-container">
+
+    <div class="formula-block">
+      <h3>Base Oils — 90ml Total</h3>
+      <div class="formula-row">
+        <div class="formula-name">Coconut Oil (Virgin, Cold-Pressed)<small>Penetrates shaft · Protein protection</small></div>
+        <div class="formula-amount">30 ml</div>
+      </div>
+      <div class="formula-row">
+        <div class="formula-name">Sesame Oil (Unrefined, Cold-Pressed)<small>Ayurvedic base · Deep nourishment</small></div>
+        <div class="formula-amount">25 ml</div>
+      </div>
+      <div class="formula-row">
+        <div class="formula-name">Jojoba Oil (Golden, Cold-Pressed)<small>Sebum balance · Delivery vehicle</small></div>
+        <div class="formula-amount">15 ml</div>
+      </div>
+      <div class="formula-row">
+        <div class="formula-name">Jamaican Black Castor Oil<small>Scalp circulation · PGD2 inhibitor</small></div>
+        <div class="formula-amount">10 ml</div>
+      </div>
+      <div class="formula-row">
+        <div class="formula-name">Argan Oil (Organic)<small>Oxidative protection · Conditioning</small></div>
+        <div class="formula-amount">5 ml</div>
+      </div>
+      <div class="formula-row">
+        <div class="formula-name">Pumpkin Seed Oil (Cold-Pressed)<small>DHT blocker · 5-α reductase inhibitor</small></div>
+        <div class="formula-amount">5 ml</div>
+      </div>
+    </div>
+
+    <div class="formula-block">
+      <h3>Herbal Infusion Powders</h3>
+      <p style="font-size:0.78rem;color:rgba(253,246,232,0.45);margin-bottom:16px;font-style:italic;">(Infused in base oils before straining — see process)</p>
+      <div class="formula-row">
+        <div class="formula-name">Bhringraj Powder<small>King of hair herbs · Anagen extension</small></div>
+        <div class="formula-amount">2 tsp</div>
+      </div>
+      <div class="formula-row">
+        <div class="formula-name">Amla Powder<small>Vit-C, DHT blocker, antioxidant</small></div>
+        <div class="formula-amount">2 tsp</div>
+      </div>
+      <div class="formula-row">
+        <div class="formula-name">Brahmi / Gotu Kola Powder<small>Collagen · Microcirculation</small></div>
+        <div class="formula-amount">1 tsp</div>
+      </div>
+      <div class="formula-row">
+        <div class="formula-name">Hibiscus Flower Powder<small>Amino acids · Follicle stimulation</small></div>
+        <div class="formula-amount">1 tsp</div>
+      </div>
+      <div class="formula-row">
+        <div class="formula-name">Fenugreek Seeds (crushed)<small>Diosgenin · Natural conditioner</small></div>
+        <div class="formula-amount">1 tsp</div>
+      </div>
+      <div class="formula-row">
+        <div class="formula-name">Neem Powder<small>Antifungal · Scalp detox</small></div>
+        <div class="formula-amount">½ tsp</div>
+      </div>
+    </div>
+
+    <div class="formula-block">
+      <h3>Essential Oils — Added After Cooling</h3>
+      <p style="font-size:0.78rem;color:rgba(253,246,232,0.45);margin-bottom:16px;font-style:italic;">(Per 100ml finished oil — add to room-temp oil)</p>
+      <div class="formula-row">
+        <div class="formula-name">Rosemary Essential Oil<small>#1 evidence-backed — DHT + circulation</small></div>
+        <div class="formula-amount">25 drops</div>
+      </div>
+      <div class="formula-row">
+        <div class="formula-name">Peppermint Essential Oil<small>Vasodilation · Follicle activation</small></div>
+        <div class="formula-amount">15 drops</div>
+      </div>
+      <div class="formula-row">
+        <div class="formula-name">Lavender Essential Oil<small>Anti-inflammatory · Cortisol reduction</small></div>
+        <div class="formula-amount">12 drops</div>
+      </div>
+      <div class="formula-row">
+        <div class="formula-name">Cedarwood Essential Oil<small>Dermal papilla · 44% alopecia study</small></div>
+        <div class="formula-amount">10 drops</div>
+      </div>
+      <div class="formula-row">
+        <div class="formula-name">Thyme Essential Oil<small>Powerful — use sparingly</small></div>
+        <div class="formula-amount">5 drops</div>
+      </div>
+    </div>
+
+    <div class="formula-block">
+      <h3>Final Additions</h3>
+      <div class="formula-row">
+        <div class="formula-name">Black Seed Oil (Nigella sativa)<small>Middle Eastern tradition · Thymoquinone</small></div>
+        <div class="formula-amount">5 ml</div>
+      </div>
+      <div class="formula-row">
+        <div class="formula-name">Moringa Oil<small>Complete amino acids · Zeatin</small></div>
+        <div class="formula-amount">3 ml</div>
+      </div>
+      <div class="formula-row">
+        <div class="formula-name">Chebe Powder (soaking method)<small>Infuse in jojoba overnight</small></div>
+        <div class="formula-amount">1 tsp</div>
+      </div>
+      <div class="formula-row">
+        <div class="formula-name">Vitamin E Oil (d-alpha tocopherol)<small>Antioxidant · Natural preservative</small></div>
+        <div class="formula-amount">½ tsp</div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="highlight-box">
+    📦 <strong>Yield:</strong> ~100–110ml &nbsp;|&nbsp; 🕐 <strong>Shelf Life:</strong> 12–18 months in amber glass bottle &nbsp;|&nbsp; 🌡️ <strong>Store:</strong> Cool, dark place — never in sunlight
+  </div>
+</section>
+
+<!-- ═══════════════════ PROCESS ═══════════════════ -->
+<section id="process" class="section">
+  <span class="section-label">The Craft</span>
+  <h2 class="section-title">How to Make It —<br>The Traditional Process</h2>
+  <div class="gold-rule"></div>
+
+  <p class="prose">In Ayurveda, the oil-making process (called <strong>Taila Paka Vidhi</strong>) is considered sacred. The slow heat method extracts the deepest bioactive compounds from each herb into the oil. This is not cooking — it is a transferring of intelligence from herb to oil. Patience is the most important ingredient.</p>
+
+  <div class="process-timeline">
+
+    <div class="process-step">
+      <div class="step-dot"></div>
+      <div class="step-number">Step 01 — Day Before</div>
+      <div class="step-title">Prepare the Chebe Infusion</div>
+      <div class="step-body">In a small glass jar, combine 1 tsp chebe powder with the 15ml of jojoba oil. Seal and leave overnight (8–12 hours). Chebe's active compounds — resin-based — are fat-soluble and require time to fully transfer. The next morning, strain through fine muslin cloth. This is your chebe-infused jojoba. Set aside.</div>
+      <div class="step-tip">🌙 Tradition: The Bassari women of Chad would mix chebe with the fat of locally sourced seeds and apply as a paste. We bring the same intelligence into a oil format.</div>
+    </div>
+
+    <div class="process-step">
+      <div class="step-dot"></div>
+      <div class="step-number">Step 02 — Morning</div>
+      <div class="step-title">Set Up Your Double Boiler (Bain-Marie)</div>
+      <div class="step-body">Fill a saucepan with 2–3 inches of water. Place a stainless steel or glass bowl on top — this is your Ayurvedic taila vessel. The bowl must not touch the water. Bring water to a gentle simmer only — never a rolling boil. High heat destroys phytonutrients. The entire process must stay below 65°C (150°F).</div>
+      <div class="step-tip">⚠️ Critical: Use a kitchen thermometer. Overheating is the most common mistake — it converts beneficial compounds into inert compounds and can create rancidity.</div>
+    </div>
+
+    <div class="process-step">
+      <div class="step-dot"></div>
+      <div class="step-number">Step 03</div>
+      <div class="step-title">Combine Base Oils & Add Herb Powders</div>
+      <div class="step-body">Add all base oils to the bowl: coconut, sesame, castor, argan, and pumpkin seed (hold back jojoba for later — it goes in after with the chebe). Gently warm to 50–55°C. Then add all herb powders one at a time — bhringraj, amla, brahmi, hibiscus, fenugreek, neem. Stir gently with a wooden spoon (metal reacts with compounds). The oil will take on a beautiful deep green-brown colour.</div>
+      <div class="step-tip">🌿 You will smell the herbs releasing their essence into the oil. This is exactly as it should be. The Ayurvedic texts describe this as the herbs "entering" the oil.</div>
+    </div>
+
+    <div class="process-step">
+      <div class="step-dot"></div>
+      <div class="step-number">Step 04 — 1.5 to 2 Hours</div>
+      <div class="step-title">The Slow Infusion</div>
+      <div class="step-body">Maintain gentle heat at 50–60°C for 1.5 to 2 hours. Stir every 20–30 minutes. You are watching for the classic Ayurvedic test: when you take a small pinch of the herb sediment and roll it between your fingers, it should form a wick — no moisture, no crumbling. This means all water content has evaporated and the oil is properly prepared. Do not rush this.</div>
+      <div class="step-tip">📖 Classical reference: Ashtanga Hridayam describes the Mridu Pak (soft stage) — when the sediment rolls into a wick without sticking, the oil is ready. This is the exact same test used in 600 CE.</div>
+    </div>
+
+    <div class="process-step">
+      <div class="step-dot"></div>
+      <div class="step-number">Step 05</div>
+      <div class="step-title">Strain & Cool</div>
+      <div class="step-body">Remove from heat. Allow to cool to 40°C. Strain through a fine muslin cloth or cheesecloth (doubled) into a clean glass bowl, squeezing the herb mass firmly to extract every drop of infused oil. Discard the spent herb mass. Your base oil is now a living, herb-rich infusion. Allow to cool fully to room temperature (25°C or lower).</div>
+      <div class="step-tip">💡 Never add essential oils to hot oil — their volatile therapeutic compounds evaporate at temperatures above 35°C. Room temperature is essential for this next step.</div>
+    </div>
+
+    <div class="process-step">
+      <div class="step-dot"></div>
+      <div class="step-number">Step 06</div>
+      <div class="step-title">Add Essential Oils, Black Seed & Moringa</div>
+      <div class="step-body">Once oil is fully at room temperature, add: the chebe-infused jojoba (15ml), black seed oil (5ml), moringa oil (3ml), and Vitamin E (½ tsp). Then add essential oils drop by drop: rosemary (25 drops), peppermint (15), lavender (12), cedarwood (10), thyme (5). Stir gently but thoroughly for 2 minutes.</div>
+      <div class="step-tip">🌹 The essential oil blend mirrors the famous Hay et al. (1998) alopecia areata study formulation — rosemary, lavender, cedarwood, thyme in jojoba/grapeseed — which was included in British dermatology guidelines.</div>
+    </div>
+
+    <div class="process-step">
+      <div class="step-dot"></div>
+      <div class="step-number">Step 07</div>
+      <div class="step-title">Bottle, Label & Cure</div>
+      <div class="step-body">Pour into a dark amber glass bottle with a dropper top. Label with the date. Leave undisturbed for 24–48 hours before first use — this "curing" period allows the compounds to fully bind and harmonise. Store in a cool, dark cupboard. Avoid plastic containers — oil pulls compounds from plastic over time.</div>
+      <div class="step-tip">🏺 Use within 12–18 months. The Vitamin E will extend shelf life. If the oil ever smells rancid (sour, paint-like), it has oxidised — discard and make fresh.</div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ═══════════════════ RITUAL ═══════════════════ -->
+<section id="ritual" class="section">
+  <span class="section-label">The Practice</span>
+  <h2 class="section-title">The Application Ritual</h2>
+  <div class="gold-rule"></div>
+
+  <p class="prose">Every great hair tradition — from the Ayurvedic abhyanga (oil massage) to the West African pre-wash soak to the Middle Eastern weekly hammam treatment — agrees on one thing: <strong>how you apply the oil is as important as what is in it.</strong> The scalp massage is not optional. It is half the treatment.</p>
+
+  <div class="ritual-grid">
+
+    <div class="ritual-card">
+      <div class="ritual-icon">🌡️</div>
+      <div class="ritual-title">Warm the Oil</div>
+      <div class="ritual-body">Place your bottle in a bowl of warm water for 5–10 minutes. Warm oil penetrates the scalp and shaft significantly better than cold oil. Never microwave. Temperature: body warm, not hot — around 37–40°C. This mimics the Ayurvedic practice of using warm taila for abhyanga.</div>
+    </div>
+
+    <div class="ritual-card">
+      <div class="ritual-icon">🖐️</div>
+      <div class="ritual-title">Section & Apply to Scalp</div>
+      <div class="ritual-body">Part your hair into 4–6 sections. Apply oil directly to the scalp along each part — not to the hair first. Use a dropper or your fingertips. Focus on areas of concern: temples, crown, nape. The scalp is where growth happens. 5–8 drops per section is sufficient.</div>
+    </div>
+
+    <div class="ritual-card">
+      <div class="ritual-icon">💆</div>
+      <div class="ritual-title">The Scalp Massage — 10 Minutes</div>
+      <div class="ritual-body">Use the pads of your fingers (not nails). Circular motions, medium pressure. Move from hairline inward. Then from nape upward. Research shows scalp massage alone (4 min/day) increases hair thickness after 24 weeks by stretching dermal papilla cells. Combined with this oil, the effect compounds. This is non-negotiable.</div>
+    </div>
+
+    <div class="ritual-card">
+      <div class="ritual-icon">🕐</div>
+      <div class="ritual-title">Leave Time</div>
+      <div class="ritual-body">Minimum: 2 hours. Ideal: overnight (cover with a silk or satin bonnet — never cotton, which pulls and absorbs). The 8-hour overnight window allows every compound to reach maximum penetration. West African and Indian grandmothers have always known this — overnight oiling is universal across traditions.</div>
+    </div>
+
+    <div class="ritual-card">
+      <div class="ritual-icon">🚿</div>
+      <div class="ritual-title">Wash Out Properly</div>
+      <div class="ritual-body">Apply a sulphate-free shampoo to dry hair first, work it into the scalp before adding water. This emulsifies the oil and lifts it without stripping the scalp. Then add water and lather, rinse, and repeat if needed. Never apply water first — it locks the oil in and makes it harder to remove.</div>
+    </div>
+
+    <div class="ritual-card">
+      <div class="ritual-icon">📅</div>
+      <div class="ritual-title">Frequency</div>
+      <div class="ritual-body">2–3 times per week for the first 3 months (the intensive phase). Then 1–2 times per week for maintenance. Consistency over 90+ days is what creates real results. Every tradition in the world agrees: this is a practice, not a one-time treatment. Commit to it as you would to any habit that changes your body.</div>
+    </div>
+
+    <div class="ritual-card">
+      <div class="ritual-icon">🧘</div>
+      <div class="ritual-title">The Mental Layer</div>
+      <div class="ritual-body">Ayurveda teaches that the scalp massage is also a meditation. Stress (cortisol elevation) is directly linked to hair loss — it pushes follicles into the telogen (shedding) phase. The lavender and brahmi in this oil work biochemically on cortisol. But the ritual itself — 10 minutes of quiet, focused self-care — is its own powerful medicine.</div>
+    </div>
+
+    <div class="ritual-card">
+      <div class="ritual-icon">🌙</div>
+      <div class="ritual-title">The New Moon Practice</div>
+      <div class="ritual-body">Many indigenous traditions (Indian, West African, Mesoamerican) tie hair care to the lunar cycle — oiling deeply during the new moon, when the body is in a receptive, inward state. Whether you follow this or not, the deeper wisdom is about rhythm and regularity. Your hair responds to consistent attention over time, not sporadic intensity.</div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ═══════════════════ SCIENCE ═══════════════════ -->
+<section id="science" class="section">
+  <span class="section-label">The Evidence</span>
+  <h2 class="section-title">What Science Says</h2>
+  <div class="gold-rule"></div>
+
+  <p class="prose">Of the 12 most popular hair oils, only 5 have been tested in proper human clinical trials. Below is an honest, evidence-ranked summary. Traditional use alone carries weight — centuries of empirical observation across millions of people is a form of data too — but the science validates the best of what tradition preserved.</p>
+
+  <table class="science-table">
+    <thead>
+      <tr>
+        <th>Ingredient</th>
+        <th>Best Human Evidence</th>
+        <th>Mechanism</th>
+        <th>Evidence Score</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong style="color:var(--gold-light)">Rosemary Oil</strong></td>
+        <td>RCT: Equal to 2% Minoxidil at 6 months in 100 patients (androgenetic alopecia)</td>
+        <td>DHT blocker (82-94%), anti-inflammatory, circulation</td>
+        <td><div class="science-score"><span class="dot-filled">●</span><span class="dot-filled">●</span><span class="dot-filled">●</span><span class="dot-filled">●</span><span class="dot-filled">●</span></div></td>
+      </tr>
+      <tr>
+        <td><strong style="color:var(--gold-light)">Pumpkin Seed Oil</strong></td>
+        <td>RCT: 40% increase in hair count at 24 weeks (oral, 400mg/day — men)</td>
+        <td>5-alpha reductase inhibitor (phytosterols/beta-sitosterol)</td>
+        <td><div class="science-score"><span class="dot-filled">●</span><span class="dot-filled">●</span><span class="dot-filled">●</span><span class="dot-filled">●</span><span class="dot-empty">●</span></div></td>
+      </tr>
+      <tr>
+        <td><strong style="color:var(--gold-light)">Essential Oil Blend</strong><br><small style="color:rgba(253,246,232,0.45)">(Rosemary+Lavender+Cedarwood+Thyme)</small></td>
+        <td>RCT: 44% of alopecia areata patients showed significant improvement vs 15% control — now in British dermatology guidelines</td>
+        <td>Synergistic: DHT blocking + circulation + dermal papilla activation</td>
+        <td><div class="science-score"><span class="dot-filled">●</span><span class="dot-filled">●</span><span class="dot-filled">●</span><span class="dot-filled">●</span><span class="dot-empty">●</span></div></td>
+      </tr>
+      <tr>
+        <td><strong style="color:var(--gold-light)">Black Seed Oil</strong></td>
+        <td>2017 study: 76% reduction in hair fall; 2013 RCT: significant improvement in telogen effluvium (n=20)</td>
+        <td>Thymoquinone: anti-inflammatory, antihistamine, antioxidant</td>
+        <td><div class="science-score"><span class="dot-filled">●</span><span class="dot-filled">●</span><span class="dot-filled">●</span><span class="dot-filled">●</span><span class="dot-empty">●</span></div></td>
+      </tr>
+      <tr>
+        <td><strong style="color:var(--gold-light)">Vitamin E</strong></td>
+        <td>Randomised trial: 34.5% increase in hair number at 8 months</td>
+        <td>Antioxidant — neutralises free radical oxidative stress on follicles</td>
+        <td><div class="science-score"><span class="dot-filled">●</span><span class="dot-filled">●</span><span class="dot-filled">●</span><span class="dot-filled">●</span><span class="dot-empty">●</span></div></td>
+      </tr>
+      <tr>
+        <td><strong style="color:var(--gold-light)">Coconut Oil</strong></td>
+        <td>Multiple studies confirming shaft penetration and protein loss reduction</td>
+        <td>Only oil that penetrates hair shaft — reduces protein loss by up to 39%</td>
+        <td><div class="science-score"><span class="dot-filled">●</span><span class="dot-filled">●</span><span class="dot-filled">●</span><span class="dot-filled">●</span><span class="dot-empty">●</span></div></td>
+      </tr>
+      <tr>
+        <td><strong style="color:var(--gold-light)">Peppermint Oil</strong></td>
+        <td>Animal studies only — 92% regrowth vs 55% for minoxidil 3% at 4 weeks. No human RCT yet.</td>
+        <td>Menthol vasodilation — increases blood flow to follicles</td>
+        <td><div class="science-score"><span class="dot-filled">●</span><span class="dot-filled">●</span><span class="dot-filled">●</span><span class="dot-empty">●</span><span class="dot-empty">●</span></div></td>
+      </tr>
+      <tr>
+        <td><strong style="color:var(--gold-light)">Bhringraj</strong></td>
+        <td>Animal + in vitro studies: follicle proliferation, anagen extension. Human trials limited.</td>
+        <td>Wedelolactone, ecliptine — follicle cell growth signals</td>
+        <td><div class="science-score"><span class="dot-filled">●</span><span class="dot-filled">●</span><span class="dot-filled">●</span><span class="dot-empty">●</span><span class="dot-empty">●</span></div></td>
+      </tr>
+      <tr>
+        <td><strong style="color:var(--gold-light)">Amla</strong></td>
+        <td>In vitro: 5-alpha reductase inhibition. Animal studies positive. Ethnobotanical evidence is massive.</td>
+        <td>Ellagic acid, vitamin C, gallic acid — antioxidant + DHT inhibition</td>
+        <td><div class="science-score"><span class="dot-filled">●</span><span class="dot-filled">●</span><span class="dot-filled">●</span><span class="dot-empty">●</span><span class="dot-empty">●</span></div></td>
+      </tr>
+      <tr>
+        <td><strong style="color:var(--gold-light)">Scalp Massage</strong></td>
+        <td>Human study: 4 min/day for 24 weeks → increased hair thickness (stretch-induced dermal papilla activation)</td>
+        <td>Mechanical: stretch forces activate dermal papilla cell growth genes</td>
+        <td><div class="science-score"><span class="dot-filled">●</span><span class="dot-filled">●</span><span class="dot-filled">●</span><span class="dot-filled">●</span><span class="dot-empty">●</span></div></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="highlight-box">
+    💡 <strong>Key insight from the research:</strong> No single oil is a miracle cure. The power of this formula lies in its synergistic combination — multiple mechanisms addressing hair growth from different angles simultaneously: DHT blocking, scalp circulation, follicle nutrition, oxidative protection, scalp microbiome balance, and protein preservation.
+  </div>
+</section>
+
+<!-- ═══════════════════ TIPS ═══════════════════ -->
+<section id="tips" class="section">
+  <span class="section-label">Wisdom & Questions</span>
+  <h2 class="section-title">Tips, Cautions & FAQs</h2>
+  <div class="gold-rule"></div>
+
+  <div class="tips-grid">
+    <div class="tip-card">
+      <div class="tip-num">01</div>
+      <div class="tip-title">Always patch test first</div>
+      <div class="tip-body">Apply a small amount to the inner wrist 24 hours before use. Essential oils — especially thyme and peppermint — can cause irritation in sensitive skin. Dilution ratios in this formula are safe for most people, but individual sensitivity varies.</div>
+    </div>
+    <div class="tip-card">
+      <div class="tip-num">02</div>
+      <div class="tip-title">Expect 8–12 weeks minimum</div>
+      <div class="tip-body">Hair growth cycles are 3–6 months long. You cannot change the anagen phase in 2 weeks. Most traditions speak of 3–6 month commitments. Clinical trials measured outcomes at 3, 6, and 12 months. Consistency and patience are the active ingredients most people skip.</div>
+    </div>
+    <div class="tip-card">
+      <div class="tip-num">03</div>
+      <div class="tip-title">Less is more on the hair shaft</div>
+      <div class="tip-body">This oil is designed primarily for scalp application. A few drops run through the mid-lengths and ends for moisture sealing is fine, but over-application to the hair shaft without washing will cause buildup. The scalp is the target, not the strand.</div>
+    </div>
+    <div class="tip-card">
+      <div class="tip-num">04</div>
+      <div class="tip-title">Pregnancy caution</div>
+      <div class="tip-body">Thyme, peppermint, and rosemary essential oils should be used with caution during pregnancy. Consult your doctor before using essential oil-containing products. You can make a gentler version using only the base oils and herbal infusion without essential oils.</div>
+    </div>
+    <div class="tip-card">
+      <div class="tip-num">05</div>
+      <div class="tip-title">Source quality ingredients</div>
+      <div class="tip-body">Cold-pressed, unrefined, organic — these are not marketing words here, they are functional requirements. Refined oils have had their bioactive compounds stripped away. Pesticide-laden herbs introduce toxins to your scalp. The formula is only as good as what goes in it.</div>
+    </div>
+    <div class="tip-card">
+      <div class="tip-num">06</div>
+      <div class="tip-title">Hair loss has many causes</div>
+      <div class="tip-body">This formula addresses topical/nutritive and DHT-related hair loss most effectively. If your hair loss is sudden, patchy, or associated with health changes, see a dermatologist or trichologist. Thyroid disorders, nutritional deficiencies, and autoimmune conditions require medical attention, not oil alone.</div>
+    </div>
+    <div class="tip-card">
+      <div class="tip-num">07</div>
+      <div class="tip-title">Scalp massage amplifies everything</div>
+      <div class="tip-body">A 2019 study showed that scalp massage alone (without any oil) increased hair thickness after 24 weeks. The mechanical stimulation stretches dermal papilla cells and upregulates growth genes. Combined with this oil, the absorption and activation is compounded. Never skip the massage.</div>
+    </div>
+    <div class="tip-card">
+      <div class="tip-num">08</div>
+      <div class="tip-title">Store in amber glass, never plastic</div>
+      <div class="tip-body">Plant oils are sensitive to light and heat. UV light catalyses oxidation. Plastic can leach compounds into the oil over time. An amber or cobalt glass bottle with a dropper top is the ideal container. Keep it in a cool, dark drawer — not the bathroom shelf which gets warm and humid.</div>
+    </div>
+    <div class="tip-card">
+      <div class="tip-num">09</div>
+      <div class="tip-title">Simplify if needed</div>
+      <div class="tip-body">Can't source all ingredients? The most impactful core is: coconut oil + sesame oil + bhringraj powder + amla powder + rosemary essential oil + peppermint essential oil. That five-ingredient version captures the heart of this formula and is backed by the strongest evidence. Start there and build.</div>
+    </div>
+    <div class="tip-card">
+      <div class="tip-num">10</div>
+      <div class="tip-title">Support from within</div>
+      <div class="tip-body">No topical oil compensates for severe nutritional deficiency. Hair is made of protein — ensure adequate protein intake. Iron, zinc, biotin, and B12 deficiencies are among the most common causes of hair loss. The oil works on the outside. Nourish the inside too: whole foods, adequate sleep, and stress management complete the picture.</div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="gold-line"></div>
+  <p>Made with 5,000 years of tradition · Validated by modern science</p>
+  <p style="margin-top: 8px;">Ayurveda · Moroccan Berber · West African · Middle Eastern · Caribbean · Mediterranean</p>
+  <p style="margin-top: 16px; font-size: 0.7rem; opacity: 0.6;">This guide is for educational purposes. Consult a dermatologist or trichologist for medical hair concerns.</p>
+</footer>
+
+<script>
+  function showTab(id) {
+    document.querySelectorAll('.section').forEach(s => s.classList.remove('active'));
+    document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+    document.getElementById(id).classList.add('active');
+    event.target.classList.add('active');
+    window.scrollTo({ top: document.querySelector('.tab-nav').offsetTop - 10, behavior: 'smooth' });
+  }
+
+  // Animate bars on view
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        e.target.style.width = e.target.getAttribute('data-width') || e.target.style.width;
+      }
+    });
+  });
+</script>
+</body>
+</html>
